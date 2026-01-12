@@ -9,15 +9,11 @@ public class MainApp extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        FXMLLoader loader = new FXMLLoader(
-                getClass().getResource("main.fxml")
-        );
+        FXMLLoader loader =
+                new FXMLLoader(getClass().getResource("main.fxml"));
 
-        Scene scene = new Scene(loader.load(), 1920, 1040);
-
-        stage.setTitle("Elite-style Rotating Dodecahedron");
-        stage.setScene(scene);
-        stage.setResizable(false);
+        stage.setScene(new Scene(loader.load()));
+        stage.setTitle("Elite-style Engine Demo");
         stage.show();
     }
 
